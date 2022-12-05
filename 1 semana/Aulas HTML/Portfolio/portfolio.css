@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Cada conteúdo fique na sua box*/
+    
+    /* Não coloque font-size aqui*/
+}
+
+ul ,a{
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+/* Coloquei a cor e a foto no backgroudn assim fica limpo.*/
+
+body{
+    /* background-image:  url(./pexels-mahdi-bafande-14395900.jpg);
+   1 background-color: aqua;
+   2 background-repeat: no-repeat; 
+   3 background-position: center center fixed;*/
+
+    background: url(./pexels-mahdi-bafande-14395900.jpg) no-repeat center center fixed;
+    /* Os itens 1,2 e 3 foram substituídos por esse linha*/
+   
+    background-size: cover;
+
+    /* background-size: vai deixar sempre do tamanho da tela */
+
+    background-image: linear-gradient(to top, #d41dc5, #b92cd1, #9839dc, #6c43e5, #124beb);
+
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    /* border-bottom: 2px solid white ; */
+    /* border-bottom: 15px ridge white; */
+    box-shadow: 0px 0px 5px 0px white;
+    
+}
+
+header img {
+    max-width: 150px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    padding: 3px;
+    font-weight: 800;
+    text-decoration: dotted;
+    text-shadow: #ec04d9;
+    text-rendering: geometricPrecision;
+    font-size: 25px;
+}
+
+.container {
+    text-align: center;
+}
+
+.container .name h1 {
+    font-size: 50px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container .name h5 {
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.container #about p {  /* Poderia ter colocado apenas: #about p*/
+    max-width: 600px;
+    margin:0 auto;    /* Coloque para alinhas as paradas*/
+    text-align: center;
+    padding: 15px;
+}
+
+.form{
+    width: 400px;
+    margin: 0 auto;
+    width: 60%;  /* Corresponde e 60% da largura da do pai*/
+    padding: 10px;
+    margin: 10px auto; 
+}
+
+.form #input{
+    width: 70%; /* Corresponde e 70% da largura da do pai - .form*/
+    border: 5px solid rgb(182, 178, 178);
+    padding: 5px 10px; 
+}
+
+button{
+    background-color: green;
+    color: azure;
+    width: 125px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer; 
+}
+
+/*  A transition coloquei no seletor anterior button e 
+funcionou do mesmo jeito */
+button:hover{
+    transition: 1000ms;
+    color: #0c0c0c;
+    background-color: #6c43e5;
+    text-decoration: solid;
+    font-weight: 800;
+}
+
+
+ul li a:hover{
+    color: #490dee;
+    text-decoration: underline;
+    transition: 300ms;
+}
+
+.fa-solid {  /* Perceba que a classe dos icones é essa*/
+    font-size: 55px;
+    color: #6c43e5;
+    cursor: pointer;
+    animation: blink 1s infinite steps(5,start);
+   /* blink é o nome daanimation*/
+}
+
+/* keyframes - são usados para chamar nossa animação */
+@keyframes blink {
+    to{
+        visibility: hidden;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;  /* Selecionar o tempo para poder ver ele 
+    girando*/
+}
+
+#animation{
+    transition: 300ms;
+}
+
+/* Aqui vamos fazer o texto descer*/
+
+#about{
+    margin: 0 auto;
+    display: none;
+/* Botei para o texto não aparecer*/
+}
+
+.active{
+    display: block !important;
+    /* Botei para o texto aparecer, tive que colocar o important
+    pois sem ele não queria aparecer*/
+}
+
+#contato {
+    font-size: xx-small;
+    font-weight: 200;
+    text-align: center;
+    margin:0 auto;
+}
+
+/* RESPONSIVIDADE*/
+
+/* Melhor colocar no fim do CSS, aí estamos deixando o site responsivo para os 
+diversos tamanhos de tela,lembre de colocar os mesmos nomes usados antes */
+
+@media only screen and (max-width:480px){
+    header{
+        font-size: 15px;
+    }
+
+    .container .name h1 {
+        font-size: 25px;
+        max-width: 80%;
+        
+    }
+
+    .container .name h5 {
+        font-size: 15px;
+        max-width: 80%;
+    }
+
+    #about{
+        font-size: 10px;
+        max-width: 80%;
+    }
+    header img {
+        max-width: 80px;
+    }
+
+    header ul li {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Segundo a gama deveremos escrever manualmente esses metas abaixo-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Texto de uma página web">
+    <meta name="author" content="Gama Academy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Num site responsivo onde vai ser usado em vários tipos de dispositivos 
+        ele vai adpatar o site a largura do device-->
+
+    <link rel="shortcut icon" href="Imagens/apple-touch-icon.png" type="image/x-icon">
+    <title>Gama</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script type="text" src="index.js"></script>
+</head>
+
+<body>
+
+    <fieldset>
+        <header role="banner">
+            <nav role="navigation" aria-level="main navigation">
+                <ul role="menu">
+                    <li><a href="http://" role="menuitem">Home</a>
+                    <li><a href="http://" role="menuitem">Quem somos</a>
+                    <li><a href="http://" role="menuitem">Contato</a>
+                    <li><a href="http://" role="menuitem">Conteúdos</a>
+                </ul>
+
+            </nav>
+        </header>
+    </fieldset>
+
+    <header>
+
+        <h1>Bem vindo</h1>
+        <img src="Imagens/download.png" alt="foto by Haeckel" aria-labelledby="textoabaixo">
+
+        <p id="textoabaixo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, accusamus, eum assumenda
+            voluptatibus incidunt
+            quo debitis corrupti dolore nam eius tempora, voluptatem cupiditate perspiciatis ipsa magnam molestiae
+            labore aut ex.</p>
+
+    </header>
+
+    <main>
+        <a href="http://google.com.br" title="Site Google" target="_blank">google site</a>
+        <p>Ou podemos usar uma imagem </p>
+
+        <a href="http://google.com.br" title="Site Google" target="_self">
+            <img src="Imagens/google.png" alt="foto">
+        </a>
+    </main>
+    <br>
+    <br>
+    <br>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur excepturi voluptates id facere, iste
+        aspernatur obcaecati nobis error ipsam animi adipisci eos ex aliquid quibusdam. Ad non iusto natus possimus?
+    </article>
+
+    <br>
+    <header>
+        <h1>Vídeos</h1>
+        <video src="" width="550" height="550" type="video/mp4"></video>
+        <!--Colocando hospedagem própria-->
+
+        <h2>Hospedagem do Youtube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </header>
+
+    <br><br><br><br><br>
+    <header>
+        <h1>Site da Gama</h1>
+        <iframe
+            src="https://www.gama.academy/?&utm_source=google&utm_medium=paid-search&utm_campaign=brand-awareness&utm_term=gama-academy&gclid=CjwKCAiAvK2bBhB8EiwAZUbP1P_18Fd48r4Kyy9YXEGm4FuwASNhZ42p-0n2E5DcIVDpMYiMb58_2RoCHx4QAvD_BwE"
+            width="450" height="450" frameborder="0"></iframe>
+    </header>
+
+    <br><br><br><br>
+
+    <h1>Calculadora de taxa-de-metabolismo-basal-harris-benedict</h1>
+    <iframe src="https://pt.calcuworld.com/nutricao/taxa-de-metabolismo-basal-metodo-harris-benedict/?iframe=1"
+        width="100%" height="400"></iframe>
+        
+    <br><br><br><br>
+
+    <h1>Listas</h1>
+
+    <ol type="A" start="2">
+        <li>1 item
+        <li>2 item
+        <li>3 item
+    </ol>
+
+    <ul type="circle">
+        <li>1 item
+        <li>2 item
+        <li>3 item
+    </ul>
+
+    <dl>
+        <dt>Palavra 1</dt>
+        <dd>legal</dd>
+        <dt>Palavra 2</dt>
+        <dd>convencido</dd>
+    </dl>
+    <br><br><br><br>
+
+    <h1>Tabela</h1>
+
+    <table summary="Tabela Referente aos meses">
+
+        <!-- Esse Caption refere-se a acessibilidade,onde o leitor de tela vai ler 
+        para o cego -->
+        <caption>Tabelas sobre os meses</caption>
+
+        <thead>
+            <tr>
+                <th abbr="Mês" scope="col">Mês</th>
+                <th abbr="Nome">nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">01</td>
+                <td>Janeiro</td>
+            </tr>
+            <tr>
+                <td scope="row">02</td>
+                <td>Fev</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Mar</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>april</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>4 meses</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br><br><br>
+    <h1>Formulário</h1>
+    <form action="#" method="post">
+        <!--Action vai dar o destino do back end que irá os dados do form-->
+
+        <fieldset>
+            <legend for="campo1">Nome</legend>
+            <!--Deixa o Nome entre as linhas do fieldset-->
+            <br>
+            <input type="text" name="nome" placeholder="Digite seu nome" required id="campo1">
+
+            <!--Perceba que o for = campo1 e o id = campo1 -->
+            <legend for="campo2"></legend>
+            <select name="opcoes" id="campo2">
+                <option value="1">academia</option>
+                <option value="2">Java</option>
+                <option value="3">Praia</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estudos</legend>
+            <label for="">Vendas</label>
+            <input type="radio" name="product1" value="1">
+
+            <label for="">Marketing</label>
+            <input type="radio" name="product1" value="2">
+            <br>
+
+        </fieldset>
+
+        <input type="submit" value="Enviar o forumulario">
+
+    </form>
+
+    <br><br><br><br>
+
+    <!--Aulas: Acessibilidade Landmarks + Acessibilidade Linguagem Texto e Elementos -->
+
+    <!-- A primeira parte foi colocada lá em cima do código, referente a 1 aula e a 
+    segunda aula está abaixo: -->
+
+    <p lang="en">Resources for Developers,
+        by Developers
+        Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+
+    <button aria-label="acesse o site para saber mais acerca de Web" aria-labelledby="bsite">
+        Saber Mais</button>
+
+    <p id="bsite">Site do Mozila</p>
+    <!-- O lang serve para quando alguém com necessidade colocar para ler teráum accent em ingles-->
+
+
+</body>
+
+<br><br><br><br>
+
+<footer role="contentinfo"> &copy Haeckel Inc</footer>
+
+</html>

@@ -1,0 +1,162 @@
+
+
+#banner .container{
+    padding: 122px 210px 10px 239px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+@media (max-width: 1300px)
+{
+    #banner .container{
+        padding: 100px 180px 10px 200px;  
+    }
+}
+@media (max-width: 1200px)
+{
+    #banner .container{
+        padding: 100px 180px 10px 200px;
+        
+    }
+    #banner .container img{
+        width: 350px;
+        height: 350px;
+        margin-top: -55px;
+    
+    }
+}
+@media (max-width: 1126px)
+{
+    #banner .container{
+        padding: 80px 140px 10px 150px;
+        
+    }
+    #banner .container img{
+        width: 300px;
+        height: 300px;
+        margin-top: -25px;
+    
+    }
+}
+@media (max-width: 1000px)
+{
+    #banner .container{
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+    #banner .container img{
+        width: 250px;
+        height: 250px;
+        margin-top: -25px;
+    
+    }
+}
+
+#banner .container div{
+    display: flex;
+    flex-direction: column;
+}
+
+#banner .container div h1{ 
+    text-transform: uppercase;
+    max-width: 512px;
+    /* As vezes ao colocar o max-witdh, o texto não 
+    não ficará igual, assim podemos usar primeiro um
+    padding, pq se o texto vier do banco será ajustado
+    automaticamnete. Por segundo podemos usar a quebra
+    de linha no HTML a tag <br>*/
+    margin-bottom: 40px;
+
+/* Copiado daqui para baixo*/
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 54px;
+    color: #009688; 
+}
+
+#banner .container div span{ 
+
+    max-width: 450px;
+    max-height: 110px;
+    text-align: justify;
+
+/* Copiado daqui para baixo*/
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+#banner .container img{
+    max-width: 405px;
+    max-height: 405px;
+    margin-top: -75px;
+
+}
+
+/* CONTEÚDO*/
+
+/* SECTION*/
+#blog-content{
+    background-color: #E5E5E5;
+    padding: 109px 471px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+article{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content{
+    width: 518px;
+    
+}
+
+
+#blog-content .content{
+    
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto; 
+}
+
+.content img{
+max-width: 518px;
+max-height: 259px;
+background: #C4C4C4;
+padding-bottom: 19px;
+}
+
+
+#blog-content div h3{
+padding-bottom: 19px;
+/* Copiado daqui para baixo*/
+font-weight: 500;
+font-size: 30px;
+line-height: 34px;
+display: flex;
+align-items: center;
+color: #FF4081;
+}
+
+#blog-content div span{
+max-width: 516px;
+max-height: 80px;
+text-align: justify;
+
+/* Copiado daqui para baixo*/
+font-weight: 300;
+font-size: 17px;
+line-height: 20px;
+color: #000000;
+}
+
+
+

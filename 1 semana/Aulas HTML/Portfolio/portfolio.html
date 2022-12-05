@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio João Haeckel</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/4ee08716fc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div><img src="JohnSorvetinho-removebg-preview.png" alt=""></div>
+
+        <ul>
+            <li><a target="_blank" href="http://wa.me/5581992287868">whatsapp</a> </li>
+            <li><a target="_blank" href="http://github.com/JvHaeckel">github</a> </li>
+            <li><a target="_blank" href="http://www.linkedin.com/in/joao-haeckel">linkedin</a> </li>
+            <li><a target="_blank" href="http://mailto:joaohaeckel@gmail.com">mail</a> </li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1>João Victor Haeckel</h1>
+                <h5>Full Stack Developer</h5>
+            </div>
+
+            <div id="about">
+                <p>Estudande de tecnologia com muita vontade de aprender e praticar</p>
+            </div>
+
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-arrow-down"></i>
+            </div>
+
+            <div id="contato"><p>deixe seu contato</p></div>
+            <div class="form">
+                <form action="">
+                    <input id="input" type="text" placeholder="seu e-mail :)">
+
+                </form>
+            </div>
+            <button>Enviar</button>
+
+        </section>
+    </main>
+
+    <script>
+        function displayAbout() {
+            let arrow = document.getElementById('animation'); // criou uma variável
+            arrow.classList.toggle('rotate');
+            let text = document.getElementById('about');
+            text.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

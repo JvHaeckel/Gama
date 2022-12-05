@@ -1,0 +1,395 @@
+html,
+body {
+    font-family: 'Sono', sans-serif;
+}
+
+/* Como a semântica estabelecida vai se manter vamos usar 
+a própria tag */
+header {
+    background-color: #FFC107;
+    height: 110px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Poderia ter alinhado essa imagem dessa forma: 
+text-align: center;
+padding-top: 16px;
+padding-bottom: 17px;*/
+
+nav {
+
+    width: auto;
+    height: 48px;
+    left: 0px;
+    top: 117px;
+
+    background: #FFA000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav>a {
+    font-family: '';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FDFDFD;
+    /* Para separar podemos usar o padding ou margin, ele
+ optou por usar margin e dividir certinho pois quando 
+ adicionar algo a mais sempre fica certinho*/
+    margin: 29px;
+}
+
+#hero-header {
+    background: linear-gradient(0deg, rgba(255, 160, 0, 0.3), rgba(255, 160, 0, 0.3)), url(image.png);
+}
+
+#hero-header h2 {
+
+    float: right;
+    margin: -500px 1200px 100px 100px;
+    /* Usando o Margin vamos colocar o texto onde queremos */
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+    text-transform: lowercase;
+    color: #faf9f9;
+}
+
+#receita-da-semana h2 {
+
+    margin: 50px 1200px 50px 50px;
+    margin: 25px 0;
+    /* Quando coloca dois o 100px - top e bottom e o 
+    0 - left e rigth */
+
+    font-weight: 700;
+    font-size: 55px;
+
+    line-height: 67px;
+    /* identical to box height */
+    text-align: center;
+    /* Deixa no meio do body mas não fica onde quero*/
+    text-transform: lowercase;
+    color: #FFA000;
+}
+
+#receita-da-semana article {
+    display: inline-block;
+    /* Ocupa o espaço dele mas aceita 
+    margin e padding, pq o inline apenas ocupa o espaço 
+    dele o block é a tela inteira. Assim vai ficar um ao
+     lado do outro */
+
+    text-align: center;
+    /* Muda o comportamento da imagem assim ela não ocupa
+    a tela inteira */
+    margin: 30px;
+}
+
+#receita-da-semana h3 {
+    font-size: 26;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+button {
+    /* Coloquei pq não temos botões diferntes*/
+    background-color: #176902;
+    color: #FFFFFF;
+    margin: 5px 10px;
+    font-size: 24px;
+    font-weight: 600;
+
+    /* P*/
+    margin: 20px 0;
+    text-decoration: none;
+    /* Tira o underline do texto*/
+}
+
+#hero-footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(255, 193, 7, 0.4), rgba(255, 193, 7, 0.4)), url(image.png);
+}
+
+#hero-footer h2 {
+    margin: -550px 1550px 500px 50px;
+    font-weight: 700;
+    font-size: 65px;
+    margin: 30px;
+    float: left;
+    color: #FFC107;
+}
+
+#hero-footer p {
+    font-weight: 500;
+    font-size: 25px;
+    width: 400px;
+}
+
+footer {
+    background-color: #FFA000;
+    color: white;
+    margin-top: 30px;
+}
+
+footer img {
+    vertical-align: middle;
+}
+
+/* SITE DE RECEITAS*/
+
+#receita-da-semana h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+    text-transform: lowercase;
+    color: #FFA000;
+
+    /* Aqui vou colocar a localização dele*/
+    display: flex;
+    justify-content: center;
+    /* Ao invés de usar margin e padding ou os dois basta
+     usar as propriedades acima*/
+}
+
+#receita-da-semana h3 {
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+}
+
+#primeira {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#primeira article {
+    /*  display: inline-block;   Ocupa o espaço dele mas 
+    aceita margin e padding, pq o inline apenas ocupa o 
+    espaço dele o block é a tela inteira. Assim vai ficar
+     um ao lado do outro */
+
+    text-align: center;
+    /* Muda o comportamento da imagem assim ela não ocupa
+    a tela inteira */
+    margin: 50px;
+}
+
+#primeira h3 {
+    font-size: 26;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/*RECEITA DO RISOTO DE ABÓBORAS*/
+/* main-internal = risoto*/
+
+#risoto {
+    margin: 100px 100px 200px 100px;
+    margin: 0 120px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#risoto article {
+    display: flex;
+    flex-direction: column;
+    /* Isso vai deixar as imagens laterais alinhadas com 
+    o seguinte título delas*/
+}
+
+#risoto h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+    text-transform: lowercase;
+    color: #FFA000;
+    margin-bottom: 25px;
+}
+
+#risoto img {
+    width: 592px;
+    height: 311px;
+    background: #C4C4C4;
+}
+
+#tags {
+    margin-bottom: 58px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: lowercase;
+    color: #176902;
+}
+
+#tags span {
+    border: 1px solid #176902;
+    padding: 7px 25px;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+
+
+#risoto strong {
+    font-weight: 700;
+}
+
+#risoto p {
+    max-width: 590px;
+    text-align: justify;
+}
+
+#risoto ul {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: lowercase;
+    color: #000000;
+}
+
+
+/* RECEITAS RELACIONADAS*/
+
+#receitas-relacionadas h2 {
+    padding-top: 50px;
+    /* Coloquei para não ficar na mesma altura do h1. 
+    O prof usou apenas margin-bottom:27px*/
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    text-transform: lowercase;
+    color: #FFA000;
+}
+
+#receitas-relacionadas img {
+    height: 345px;
+    width: 342px;
+}
+
+#receitas-relacionadas article {
+    box-shadow: 0px 4px 4px black;
+    margin-bottom: 55px;
+    text-align: center;
+    /* Alinhou os textos*/
+}
+
+#receitas-relacionadas article h3 {
+    Font-size: 26px;
+    Line-height: 32px;
+    Line-height: 100%;
+}
+
+/* Página de Contato*/
+
+#comeco {
+    background-image: url(Imagens/imagem\ contato.png);
+    padding: 49px 122px 70px;
+    margin-bottom: 60px;
+}
+
+#comeco h1 {
+    
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+    text-transform: lowercase;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.36);
+    max-width: 419px;
+}
+
+#contato {
+    display: flex;
+    /* Podia colocar: justify-content: space-between; */
+    justify-content: flex-start;
+}
+
+#contato fieldset {
+    margin-left: 15px;
+    width: 100%;
+    border: 1px solid #FFA000;
+    border-radius: 20px;
+
+    /* flex-grow: 1; 
+ Esta propriedade define a proporção com que um item 
+deve crescer caso seja necessário. Por padrão seu valor
+é 0, o que indica que o item não deve crescer, e são 
+aceitos apenas valores numéricos positivos.
+Optei por usar o width*/
+}
+
+#form {
+    padding: 64px 100px 64px 40px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    color: #FFC107;
+}
+
+#contato #input {
+    width: 90%;
+    border: 1px solid #FFA000;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 0px 33px 0px 37px;
+}
+
+#contato #msg {
+    width: 90%;
+    border: 1px solid #FFA000;
+    border-radius: 7px;
+    padding: 10px 0px 200px 15px;
+    margin: 0px 33px 0px 37px;
+}
+
+#contato #formulario-button {
+    padding: 10px;
+    width: 100px;
+    font-size: medium;
+    background: #FFC107;
+    border-radius: 50px;
+    margin: 0px 33px 0px 37px;
+}
+
+#contato form input ::placeholder,
+#contato form textarea ::placeholder{
+    color: #585550;
+}
+
+#contato form input:focus,
+#contato form textarea:focus {
+    outline: none;
+}
