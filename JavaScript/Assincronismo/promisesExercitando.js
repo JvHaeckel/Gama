@@ -3,7 +3,7 @@
 
 // Criando Promisses
 
-let myPromise = new Promisse((resolve, reject) => {
+let myPromise = new Promise((resolve, reject) => {
     let nome = 'joao';
 
     if (nome === 'joao') {
@@ -20,7 +20,7 @@ let myPromise = new Promisse((resolve, reject) => {
 
 // Encadeamento usando o Then - podemos colocar quanto quisermos para modificar os nossos dados
 
-let myPromise2 = new Promisse((resolve, reject) => {
+let myPromise2 = new Promise((resolve, reject) => {
     let nome = 'joao';
 
     if (nome === 'joao') {
@@ -39,7 +39,7 @@ let myPromise2 = new Promisse((resolve, reject) => {
         })
 })
 
-let myPromise3 = new Promisse((resolve, reject) => {
+let myPromise3 = new Promise((resolve, reject) => {
     let nome = 'matheus';
 
     if (nome === 'joao') {
@@ -49,28 +49,39 @@ let myPromise3 = new Promisse((resolve, reject) => {
     }
 
     // Para modificar ainda mais encadeamos um outro then deixando o texto em caixa baixa
-    myPromise3
-        .then((data) => {
-            console.log(data);
-        })
-        .catch((erros) => {
-            console.log('Aconteceu um erro:' + erros);
-        })
-})
+//     myPromise3
+//         .then((data) => {
+//             console.log(data);
+//         })
+//         .catch((erros) => {
+//             console.log('Aconteceu um erro:' + erros);
+//         })
+// })
 
 // Várias Promises
 
-let p4 = new Promise((resolve, reject) => {
+let p1 = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+        resolve('P1 ok');
+    },2000)
+    
+})
+let p2 = new Promise((resolve, reject) => {
     resolve('P1 ok');
 })
-let p5 = new Promise((resolve, reject) => {
-    resolve('P1 ok');
-})
-let p6 = new Promise((resolve, reject) => {
+let p3 = new Promise((resolve, reject) => {
     resolve('P1 ok');
 })
 
-let allP = Promise.all([p1,p2,p3]).then((data) => {
-    console.log(data);
-}) 
+// const resolveall = Promise.all([p1,p2,p3]).then((data) => {
+//     console.log(data)
+// })                    
+
+
+
+
+
+
+
 

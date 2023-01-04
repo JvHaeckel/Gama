@@ -23,7 +23,7 @@ let pedido = async () => {
 
 festejar = (bolo) => console.log("Fazendo festa com bolo de " + bolo);
 
- preparaFesta = () => {
+let preparaFesta = async () => {
     /* Encomendando*/
     // let bolo = pedido();
     
