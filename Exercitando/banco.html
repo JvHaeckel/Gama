@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta API Banco</title>
+    <link rel="stylesheet" href="banco.css">
+</head>
+
+<body>
+    <fieldset>
+        <form action="#" id="formBanco">
+            <input type="text" name="banco" id="banco" required placeholder="Digite aqui" />
+            <button type="submit" id="buscar">Buscar</button>
+        </form>
+    </fieldset>
+    <br>
+    <fieldset>
+        <section id="respostas">
+            <input type="text" disabled id="ispb" placeholder="ispb" class="resultados" /> <br>
+            <input type="text" disabled id="name" placeholder="name" class="resultados" /> <br>
+            <input type="text" disabled id="code" placeholder="code" class="resultados" /> <br>
+            <input type="text" disabled id="fullName" placeholder="fullName" class="resultados" />
+        </section>
+    </fieldset>
+
+    <script src="const.js"></script> <!--A importação dela tem que vir antes de chamar o JS-->
+    <script src="banco.js"></script>
+</body>
+
+</html>
