@@ -3,14 +3,19 @@ getCatFact = () =>  {
     let endpoint = 'https://catfact.ninja/fact';
     fetch(endpoint)  /* Fetch retoma um promise que para pegar vamos usar o then*/
     .then(response => {
+
+        if(!response.ok){
+            return new Error ('Requisição falhou');
+        }
+
         return response.json();
     })
     .then(data => {
         let catFactDiv = document.getElementById('cat-fact');
-        catFactDiv.textContent = data.fact  /* Esse fact veio do console*/
+        catFactDiv.textContent = data.fact; /* Esse fact veio do console*/
     })
     .catch(error => {  /* Quando colocamos o catch após alguns then significa que vai erro*/
-        console.error('Requisição falhou'); 
+        console.error('Requisição falhou com o erro' + error); 
     })
 }
 getCatFact();  
