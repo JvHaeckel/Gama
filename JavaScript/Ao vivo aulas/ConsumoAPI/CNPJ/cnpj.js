@@ -13,6 +13,7 @@ const buscaCNPJ = async (cnpj) => {
   });
 };
 
+// Funçao que dará um feedback visual ao clicar no botão Buscar ele vira Buscando
 const feedbackBuscando = (buscando = true) => {
   inputCNPJ.disabled = buscando;
   btnBuscar.disabled = buscando;

@@ -1,39 +1,55 @@
-const formCNPJ = document.getElementById("formCNPJ");
-const inputCNPJ = document.getElementById("cnpj");
+const formDdd = document.getElementById("formDdd");
+const inputDdd = document.getElementById("ddd");
 const btnBuscar = document.getElementById("buscar");
+const detalhes = document.getElementById("detalhes");
 
-const razaoSocial = document.getElementById("razaoSocial");
-const nomeFantasia = document.getElementById("nomeFantasia");
-const municipio = document.getElementById("municipio");
-const uf = document.getElementById("uf");
-
-const buscaCNPJ = async (cnpj) => {
-  return await fetch(`${BASE_URL}/cnpj/v1/${cnpj}`).then((response) => {
+// Transforma em JSON
+const buscaDDD = async (ddd) => {
+  return await fetch(`${BASE_URL}/ddd/v1/${ddd}`).then((response) => {
     return response.json();
   });
 };
 
+// Funçao que dará um feedback visual ao clicar no botão Buscar ele vira Buscando
 const feedbackBuscando = (buscando = true) => {
-  inputCNPJ.disabled = buscando;
+  inputDdd.disabled = buscando;
   btnBuscar.disabled = buscando;
   btnBuscar.innerText = buscando ? "Buscando" : "Buscar";
 };
 
-formCNPJ.addEventListener("submit", async (form) => {
+formDdd.addEventListener("submit", async (form) => {
   form.preventDefault();
 
   feedbackBuscando();
 
-  const resposta = await buscaCNPJ(inputCNPJ.value);
+  const resposta = await buscaDDD(inputDdd.value);
 
   if (resposta?.message) {
-    alert(resposta?.message);
+    detalhes.innerHTML = `<span style="color: red; font-weight: bold;">
+      ${resposta.message}
+    </span>`;
   } else {
-    nomeFantasia.value = resposta?.nome_fantasia;
-    razaoSocial.value = resposta?.razao_social;
-    municipio.value = resposta?.municipio;
-    uf.value = resposta?.uf;
+    detalhes.innerText = JSON.stringify(resposta);
   }
 
+  // Pq colocou como false ?
   feedbackBuscando(false);
+
+  // fetch(`${baseURL}/ddd/v1/${inputDdd.value}`)
+  //   .then((response) => {
+  //     return response.json();
+  //   })
+  //   .then((response) => {
+  //     if (response?.message) {
+  //       detalhes.innerHTML = `<span style="color: red; font-weight: bold;">
+  //         ${response.message}
+  //       </span>`;
+  //     } else {
+  //       detalhes.innerText = JSON.stringify(response);
+  //     }
+
+  //     inputDdd.disabled = false;
+  //     btnBuscar.disabled = false;
+  //     btnBuscar.innerText = "Buscar";
+  //   });
 });
